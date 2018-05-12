@@ -4,8 +4,8 @@ import scrapy
 
 class PixivspiderSpider(scrapy.Spider):
     name = 'pixivspider'
-    allowed_domains = ['https://www.pixiv.net']
-    start_urls = ['http://https://www.pixiv.net/']
+    allowed_domains = ['www.pixiv.net']
+    start_urls = ['https://www.pixiv.net/']
 
     def parse(self, response):
-        pass
+        print(response.text)
