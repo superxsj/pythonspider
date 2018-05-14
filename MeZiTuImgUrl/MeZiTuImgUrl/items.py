@@ -8,8 +8,19 @@
 from scrapy import Item ,Field
 
 
-class MezituimgurlItem(Item):
+class tupianItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    title = Field()
+
     url = Field()
+    title = Field()
+    image_urls = Field()
+    images = Field()
+    image_paths = Field()
+
+# class DoubanImgsItem(Item):
+#     # define the fields for your item here like:
+#     # name = scrapy.Field()
+#     image_urls = Field()
+#     images = Field()
+#     image_paths = Field()

@@ -64,9 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'MeZiTuImgUrl.pipelines.MezituimgurlPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   #'MeZiTuImgUrl.pipelines.MongoPipeline': 300,
+   'MeZiTuImgUrl.pipelines.ImagePipeline':300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +89,11 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+MONGO_URL = 'localhost'
+MONGO_DB = 'meizitu'
+
+#ITEM_PIPELINES = ['MeZiTuImgUrl.pipelines.ImagePipeline']  # ImagePipeline的自定义实现类
+IMAGES_STORE = 'D:\\tupian'   # 图片存储路径
+IMAGES_EXPIRES = 90                                   # 过期天数
+
