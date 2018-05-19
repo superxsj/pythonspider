@@ -7,6 +7,8 @@ from scrapy import Request,Spider
 
 from zhihuuser.items import *
 
+from zhihuuser.items import userItem
+
 
 class ZhihuSpider(Spider):
     name = 'zhihu'
