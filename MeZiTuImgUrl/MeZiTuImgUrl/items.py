@@ -5,10 +5,22 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item ,Field
 
 
-class MezituimgurlItem(scrapy.Item):
+class tupianItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+
+    url = Field()
+    title = Field()
+    image_urls = Field()
+    images = Field()
+    image_paths = Field()
+
+# class DoubanImgsItem(Item):
+#     # define the fields for your item here like:
+#     # name = scrapy.Field()
+#     image_urls = Field()
+#     images = Field()
+#     image_paths = Field()
